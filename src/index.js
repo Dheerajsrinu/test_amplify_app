@@ -25,9 +25,12 @@ try {
     APPLICATION_REGION,
     config
   );
+  awsRum.recordPageView(window.location.hash);
+  awsRum.recordEvent('CustomEvent', new Date())
 } catch (error) {
   // Ignore errors thrown during CloudWatch RUM web client initialization
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
