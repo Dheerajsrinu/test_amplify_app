@@ -25,6 +25,7 @@ try {
     APPLICATION_REGION,
     config
   );
+  
   awsRum.recordPageView(window.location.hash);
   awsRum.recordEvent('CustomEvent', new Date())
 } catch (error) {
